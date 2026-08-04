@@ -1,14 +1,17 @@
-
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     //serializefield allows you edit speed in the unity-it creates field for it there
-    [SerializeField] private float moveSpeed = 5f;
 
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rigidBody;
+
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private SpriteRenderer _characterBody;
 
     private void Awake()
     {
@@ -30,7 +33,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerInput();
+
     }
+
 
     private void FixedUpdate()
     {
@@ -46,5 +51,10 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         rigidBody.MovePosition(rigidBody.position + movement * (moveSpeed * Time.fixedDeltaTime));
+        bool characterIsWalking = movement.magnitude > 0f;
+        _animator.SetBool("isWalking", characterIsWalking);
+
+        bool flipSprite = movement.x < 0f;
+        _characterBody.flipX = flipSprite;
     }
 }
