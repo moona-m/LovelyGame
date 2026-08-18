@@ -74,6 +74,46 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Firing",
+            "id": "f537cfd7-e86b-459a-9d49-967411a83093",
+            "actions": [
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "54f7609e-9d93-4104-99bd-ee99e9d196f3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "570b05a4-2bab-4142-b0d6-492746ebd4d3",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88cbe77b-93e0-46d2-95a7-f3c3d8430c91",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
