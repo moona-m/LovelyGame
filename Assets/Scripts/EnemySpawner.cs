@@ -4,13 +4,19 @@ using UnityEngine.Tilemaps;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] Enemy _enemyPrefab;
+
+    [SerializeField] Enemy _enemyPrefab1;
+    [SerializeField] Enemy _enemyPrefab2;
+    [SerializeField] Enemy _enemyPrefab3;
+
+
     [SerializeField] Tilemap _groundTiles;
     [SerializeField] float _spawnCooldown;
-    [SerializeField] float _sCdReductionMultiplier;
-    //sCd = spawnCooldown
+    [SerializeField] float _ReductionMultiplier;
+    //_reductionMultiplier for spawnCooldown
     float _currentCooldown;
     List<Vector3> _spawnPositions = new();
+
 
     void Start()
     {
@@ -25,8 +31,10 @@ public class EnemySpawner : MonoBehaviour
 
     void DifficultyIncrease()
     {
-        _spawnCooldown += _sCdReductionMultiplier;
+        _spawnCooldown += _ReductionMultiplier;
     }
+
+
 
     Vector3 GetRandomLocation()
     {
@@ -35,7 +43,18 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemyToRandomLocation()
     {
-        Instantiate(_enemyPrefab, GetRandomLocation(), Quaternion.identity);
+        List<Enemy> _enemies = new List<Enemy>
+        {
+            _enemyPrefab1,
+            _enemyPrefab2,
+            _enemyPrefab3
+        };
+
+
+        Enemy enemy = _enemies[Random.Range(0, _enemies.Count)];
+
+
+        Instantiate(enemy, GetRandomLocation(), Quaternion.identity);
     }
     void HandleEnemySpawner()
     {
