@@ -112,8 +112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile1
   _travelSpeed: 3
-  _damage: 10
+  _damage: 3
   _rb: {fileID: 4156478449472133619}
+  _hitParticles: {fileID: 1588278934445833673, guid: 8e6d2242f8f97194db1a6bcc637931c5, type: 3}
+  _enemyHitSound: {fileID: 8300000, guid: 707d8a2da37185b4d80f967c1d52a8b3, type: 3}
 --- !u!1 &8384650069327374136
 GameObject:
   m_ObjectHideFlags: 0
