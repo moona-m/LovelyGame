@@ -1,0 +1,33 @@
+using TMPro;
+using UnityEngine;
+
+public class InGameUiManager : MonoBehaviour
+{
+    [SerializeField] CanvasGroup _gameOverPanelCG;
+    CanvasGroup _cg;
+
+    private void Awake()
+    {
+        _cg = GetComponent<CanvasGroup>();
+    }
+
+    public void ShowInGameUI()
+    {
+        _cg.alpha = 1.0f;
+        _cg.interactable = true;
+        _cg.blocksRaycasts = true;
+    }
+
+
+    public void ShowGameOverPanel()
+    {
+        _gameOverPanelCG.alpha = 1;
+        _gameOverPanelCG.interactable = true;
+        _gameOverPanelCG.blocksRaycasts = true;
+    }
+
+    public void ReturnToMainMenu()
+    {
+        GameManager.Instance.ResetGame();
+    }
+}

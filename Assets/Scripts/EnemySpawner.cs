@@ -50,9 +50,7 @@ public class EnemySpawner : MonoBehaviour
             _enemyPrefab3
         };
 
-
         Enemy enemy = _enemies[Random.Range(0, _enemies.Count)];
-
 
         Instantiate(enemy, GetRandomLocation(), Quaternion.identity);
     }
