@@ -11458,7 +11458,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -12290,7 +12290,7 @@ MonoBehaviour:
     rid: 3584414567056015377
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.90723264, g: 0.7216981, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.15
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -14533,7 +14533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7f270ebfb04b24aa591ecd28fc5c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverEffect
-  clickMe: {fileID: 0}
   _hoverScaleIncrease: 1.1
   _clickScaleIncrease: 1.13
   _tweenEffectDuration: 0.1
@@ -14685,7 +14684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7f270ebfb04b24aa591ecd28fc5c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverEffect
-  clickMe: {fileID: 0}
   _hoverScaleIncrease: 1.1
   _clickScaleIncrease: 1.13
   _tweenEffectDuration: 0.1
@@ -15488,7 +15486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7f270ebfb04b24aa591ecd28fc5c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverEffect
-  clickMe: {fileID: 0}
   _hoverScaleIncrease: 1.1
   _clickScaleIncrease: 1.13
   _tweenEffectDuration: 0.1
@@ -16651,7 +16648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7f270ebfb04b24aa591ecd28fc5c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverEffect
-  clickMe: {fileID: 0}
   _hoverScaleIncrease: 1.1
   _clickScaleIncrease: 1.13
   _tweenEffectDuration: 0.1
@@ -17042,7 +17038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7f270ebfb04b24aa591ecd28fc5c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverEffect
-  clickMe: {fileID: 0}
   _hoverScaleIncrease: 1.1
   _clickScaleIncrease: 1.13
   _tweenEffectDuration: 0.1
@@ -25939,6 +25934,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   _mixer: {fileID: 24100000, guid: 77067a8b9dc528a4cbc86632fb140017, type: 2}
   _music: {fileID: 8300000, guid: 7f2a30854f0d2d04ba73ab6bf09dfc2a, type: 3}
+--- !u!1 &1872948364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872948366}
+  - component: {fileID: 1872948365}
+  m_Layer: 0
+  m_Name: GlobalVolume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1872948365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872948364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: f0dc22577837ccd46ad9df9c9c676c20, type: 2}
+--- !u!4 &1872948366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872948364}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1410.6166, y: 590.7239, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1933426163
 GameObject:
   m_ObjectHideFlags: 0
@@ -26160,7 +26204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7f270ebfb04b24aa591ecd28fc5c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverEffect
-  clickMe: {fileID: 0}
   _hoverScaleIncrease: 1.1
   _clickScaleIncrease: 1.13
   _tweenEffectDuration: 0.1
@@ -26451,3 +26494,4 @@ SceneRoots:
   - {fileID: 1048499865}
   - {fileID: 611146532}
   - {fileID: 1186420404}
+  - {fileID: 1872948366}
