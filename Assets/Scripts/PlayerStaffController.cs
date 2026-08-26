@@ -45,8 +45,6 @@ public class PlayerStaffController : MonoBehaviour
         {
             Shoot();
             nextFireRate();
-            Debug.Log("FIRE BUTTON PRESSED!");
-
         }
 
         if (attackFireAction.action.IsPressed() && Time.time >= _nextFireTime)
@@ -63,7 +61,6 @@ public class PlayerStaffController : MonoBehaviour
     // Update is called once per frame
     void RotateStaff()
     {
-
         float angle = Mathf.Atan2(_lookDirection.y, _lookDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }

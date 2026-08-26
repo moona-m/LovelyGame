@@ -16,7 +16,6 @@ public class MainMenuManager : MonoBehaviour
     }
 
 
-
     public void OpenMainMenu()
     {
         CanvasGroupSetState(_mainMenuCG, true);

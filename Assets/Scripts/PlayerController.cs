@@ -42,9 +42,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         PlayerInput();
-
     }
-
 
     private void FixedUpdate()
     {
@@ -78,7 +76,9 @@ public class PlayerController : MonoBehaviour
             HandleWalkingSounds();
         }
 
-        bool flipSprite = movement.x < 0f;
-        _characterBody.flipX = flipSprite;
+        if (movement.x != 0)
+        {
+            _characterBody.flipX = movement.x < 0f;
+        }
     }
 }
