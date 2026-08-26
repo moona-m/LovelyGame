@@ -18,6 +18,22 @@ public class AudioManager : MonoBehaviour
     public void ChangeMasterVolume(float volume)
     {
         _mixer.SetFloat(MASTER_VOLUME_NAME, Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("Settings.MasterVolume", volume);
+        PlayerPrefs.Save();
+    }
+
+    public void ChangeMusicVolume(float volume)
+    {
+        _mixer.SetFloat(MUSIC_VOLUME_NAME, Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("Settings.MusicVolume", volume);
+        PlayerPrefs.Save();
+    }
+
+    public void ChangeSFXVolume(float volume)
+    {
+        _mixer.SetFloat(SFX_VOLUME_NAME, Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("Settings.SFXVolume", volume);
+        PlayerPrefs.Save();
     }
 
     void Init()
@@ -75,6 +91,5 @@ public class AudioManager : MonoBehaviour
             Destroy(audioSource.gameObject, audioClip.length);
         }
     }
-
 
 }
