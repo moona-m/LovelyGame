@@ -1,6 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.WSA;
+
 
 
 public class Projectile1 : MonoBehaviour
